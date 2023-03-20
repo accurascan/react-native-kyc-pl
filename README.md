@@ -3,13 +3,16 @@
 This package is for digital user verification system powered by Accura Scan. 
 
 **Installation using NPM**
-
 ```sh
 npm install --save react-native-kyc-pl
 ```
 **Installation using Yarn**
 ```sh
 yarn add react-native-kyc-pl
+```
+**Installation using Yarn from Git**
+```sh
+yarn add https://github.com/accurascan/react-native-kyc-pl
 ```
 
 ## Setup Android

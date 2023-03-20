@@ -138,16 +138,6 @@ class FMController: UIViewController {
         if livenessConfigs["feedBackGlareFaceMessage"] != nil {
             liveness.setFeedBackGlareFaceMessage(livenessConfigs["feedBackGlareFaceMessage"] as! String)
         }
-//        liveness.setFeedBackProcessingMessage(LivenessConfigs.feedBackProcessingMessage)
-//        if livenessConfigs.index(forKey: "feedBackProcessingMessage") != nil {
-//            liveness.setFeedBackProcessingMessage(livenessConfigs["feedBackProcessingMessage"] as! String)
-//        }
-//        liveness.isShowLogoImage(LivenessConfigs.isShowLogo)
-//        if livenessConfigs.index(forKey: "isShowLogo") != nil {
-//            liveness.isShowLogoImage(livenessConfigs["isShowLogo"] as! Bool)
-//        }
-//        liveness.setLogoImage("ic_logo.png")
-        
         // 0 for clean face and 100 for Blurry face
         liveness.setBlurPercentage(Int32(LivenessConfigs.setBlurPercentage)) // set blure percentage -1 to remove this filter
         
