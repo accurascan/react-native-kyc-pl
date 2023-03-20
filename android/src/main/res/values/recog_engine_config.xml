@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+<!--    //0 for clean document and 100 for Blurry document-->
+    <integer name="rg_setBlurPercentage">62</integer>
+<!--    // 0 for clean face and 100 for Blurry face-->
+    <integer name="rg_setFaceBlurPercentage">70</integer>
+<!--    // Set min percentage for glare-->
+    <integer name="rg_setGlarePercentage_0">6</integer>
+<!--    // Set max percentage for glare-->
+    <integer name="rg_setGlarePercentage_1">98</integer>
+<!--    Set Photo Copy to allow photocopy document or not-->
+    <bool name="rg_isCheckPhotoCopy">false</bool>
+<!--    Set Hologram detection to verify the hologram on the face-->
+<!--    // true to check hologram on face-->
+    <bool name="rg_SetHologramDetection">true</bool>
+<!--    Set light tolerance to detect light on document-->
+<!--    // 0 for full dark document and 100 for full bright document-->
+    <integer name="rg_setLowLightTolerance">39</integer>
+<!--    Set motion threshold to detect motion on camera document-->
+<!--    // 1 - allows 1% motion on document and-->
+<!--    // 100 - it can not detect motion and allow document to scan.-->
+    <integer name="rg_setMotionThreshold">18</integer>
+<!--    // Set min frame for qatar ID card for Most validated data. minFrame supports only odd numbers like 3,5...-->
+    <integer name="rg_setMinFrameForValidate">3</integer>
+    <!--    // To set front or back camera. allows 0,1-->
+    <integer name="rg_setCameraFacing">0</integer>
+<!--    false to disable default sound and default it is true-->
+    <bool name="rg_setEnableMediaPlayer">true</bool>
+</resources>

@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+
+<!--    new SDK changes by ANIL-->
+    <string name="feedBackLowLightMessage">Low light detected</string>
+    <integer name="feedbackLowLightTolerence">39</integer>
+    <string name="feedBackStartMessage">Put your face inside the oval</string>
+    <string name="feedBackLookLeftMessage">Look over your left shoulder</string>
+    <string name="feedBackLookRightMessage">Look over your right shoulder</string>
+    <string name="feedBackOralInfoMessage">Say each digits out loud</string>
+    <bool name="enableOralVerification">true</bool>
+    <integer name="livenessLeftRotatedYDegree">180</integer>
+    <integer name="livenessRightRotatedYDegree">0</integer>
+    <integer name="codeTextSize">30</integer>
+
+<!--    End new SDK changes by ANIL-->
+    <integer name="feedbackTextSize">18</integer>
+    <string name="feedBackframeMessage">Frame Your Face</string>
+    <string name="feedBackAwayMessage">Move Phone Away</string>
+    <string name="feedBackOpenEyesMessage">Keep Your Eyes Open</string>
+    <string name="feedBackCloserMessage">Move Phone Closer</string>
+    <string name="feedBackCenterMessage">Move Phone Center</string>
+    <string name="feedBackMultipleFaceMessage">Multiple Face Detected</string>
+    <string name="feedBackHeadStraightMessage">Keep Your Head Straight</string>
+    <string name="feedBackBlurFaceMessage">Blur Detected Over Face</string>
+    <string name="feedBackGlareFaceMessage">Glare Detected</string>
+    <string name="feedBackVideoRecordingMessage">Processing…</string>
+    <string name="feedBackProcessingMessage">Processing…</string>
+    <bool name="isShowLogo">true</bool>
+    <integer name="setBlurPercentage">80</integer>
+    <integer name="setGlarePercentage_0">-1</integer>
+    <integer name="setGlarePercentage_1">-1</integer>
+    <bool name="isSaveImage">true</bool>
+    <!--// Video recording settings-->
+    <bool name="isRecordVideo">true</bool>
+    <!--// video length in seconds-->
+    <integer name="videoLengthInSecond">5</integer>
+    <integer name="recordingTimerTextSize">45</integer>
+    <string name="recordingMessage">Scanning your face be steady</string>
+    <integer name="recordingMessageTextSize">18</integer>
+    <bool name="enableFaceDetect">true</bool>
+    <!--// If video recording and face detect are on then it'll check face match is enable or disable otherwise it will be disable.-->
+    <!--// Enable face match so it will compare the selfie camera face with document face.-->
+    <bool name="enableFaceMatch">true</bool>
+    <!--// it should be match at least livenessCustomization.fmScoreThreshold.-->
+    <integer name="fmScoreThreshold">50</integer>
+    <string name="feedbackFMFailed">Face not matched</string>
+    <string name="liveness_url">your liveness url</string>
+</resources>

@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="SCAN_TITLE_OCR_FRONT">Scan Front Side of %s</string>
+    <string name="SCAN_TITLE_OCR_BACK">Scan Back Side of %s</string>
+    <string name="SCAN_TITLE_OCR">Scan %s</string>
+    <string name="SCAN_TITLE_BANKCARD">Scan Bank Card</string>
+    <string name="SCAN_TITLE_BARCODE">Scan Barcode</string>
+    <string name="SCAN_TITLE_MRZ_PDF417_FRONT">Scan Front Side of Document</string>
+    <string name="SCAN_TITLE_MRZ_PDF417_BACK">Now Scan Back Side of Document</string>
+    <string name="SCAN_TITLE_DLPLATE">Scan Number Plate</string>
+</resources>

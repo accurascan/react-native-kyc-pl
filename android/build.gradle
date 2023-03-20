@@ -1,0 +1,109 @@
+buildscript {
+    if (project == rootProject) {
+        repositories {
+            google()
+            mavenLocal()
+            jcenter()
+            maven { url 'https://jitpack.io' }
+        }
+
+        dependencies {
+            classpath 'com.android.tools.build:gradle:4.0.0'
+            classpath ("org.jetbrains.kotlin:kotlin-gradle-plugin:1.4.21")
+        }
+    }
+}
+
+apply plugin: 'com.android.library'
+
+def enableSeparateBuildPerCPUArchitecture = false
+
+def safeExtGet(prop, fallback) {
+    rootProject.ext.has(prop) ? rootProject.ext.get(prop) : fallback
+}
+
+android {
+    compileSdkVersion safeExtGet('KycPl_compileSdkVersion', 33)
+    buildToolsVersion safeExtGet('AccuraKyc_buildToolsVersion', '30.0.2')
+    defaultConfig {
+        minSdkVersion safeExtGet('KycPl_minSdkVersion', 22)
+        targetSdkVersion safeExtGet('KycPl_targetSdkVersion', 33)
+        versionCode 1
+        versionName "1.0"
+        ndk {
+            // Specify CPU architecture.
+            // 'armeabi-v7a' & 'arm64-v8a' are respectively 32 bit and 64 bit device architecture
+            // 'x86' & 'x86_64' are respectively 32 bit and 64 bit emulator architecture
+            abiFilters 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64'
+        }
+    }
+    splits {
+        abi {
+            reset()
+            enable enableSeparateBuildPerCPUArchitecture
+            universalApk false  // If true, also generate a universal APK
+            // include "armeabi-v7a", "x86", "arm64-v8a", "x86_64"
+            include "armeabi-v7a", "x86"
+        }
+    }
+
+    packagingOptions {
+        pickFirst 'lib/arm64-v8a/libcrypto.so'
+        pickFirst 'lib/arm64-v8a/libssl.so'
+
+        pickFirst 'lib/armeabi-v7a/libcrypto.so'
+        pickFirst 'lib/armeabi-v7a/libssl.so'
+
+        pickFirst 'lib/x86/libcrypto.so'
+        pickFirst 'lib/x86/libssl.so'
+
+        pickFirst 'lib/x86_64/libcrypto.so'
+        pickFirst 'lib/x86_64/libssl.so'
+
+        pickFirst '**/libjsc.so'
+        pickFirst '**/libc++_shared.so'
+
+        pickFirst 'lib/x86/libc++_shared.so'
+        pickFirst 'lib/x86_64/libc++_shared.so'
+        pickFirst 'lib/armeabi-v7a/libc++_shared.so'
+        pickFirst 'lib/arm64-v8a/libc++_shared.so'
+        pickFirst 'lib/armeabi-v7a/libopencv_java4.so'
+        pickFirst 'lib/arm64-v8a/libopencv_java4.so'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
+    lintOptions {
+        disable 'GradleCompatible'
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+repositories {
+    mavenLocal()
+    maven {
+        // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm
+        url("$rootDir/../node_modules/react-native/android")
+    }
+    maven { url 'https://jitpack.io' }
+    google()
+    jcenter()
+}
+
+dependencies {
+    //noinspection GradleDynamicVersion
+    implementation "com.facebook.react:react-native:+"  // From node_modules
+
+    // START Additional dependencies for accura scan
+    implementation "com.github.accurascan:AccuraOCR:3.4.3"
+    implementation "com.github.accurascan:AccuraFaceMatch:3.2.0"
+    implementation "com.github.accurascan:Liveness-Android:3.2.0"
+    
+  // END Additional dependencies for accura scan
+}

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <color name="colorPrimaryDark">#AC0D18</color>
+  <color name="colorPrimary">#D32D39</color>
+  <color name="colorAccent">#D32D39</color>
+
+  <color name="darkGray">#2f323a</color>
+  <color name="backGroundColor">#edeff5</color>
+
+
+  // Accura liveness camera screen
+  <color name="livenessBackground">#FFC4C4C5</color>
+  <color name="livenessCloseIcon">#FF000000</color>
+  <color name="livenessfeedbackBg">#00000000</color>
+  <color name="livenessfeedbackText">#FF000000</color>
+  <color name="livenessRecordingText">#FF555555</color>
+
+  // Accura FaceMatch camera screen
+  <color name="faceMatchBackground">#FFC4C4C5</color>
+  <color name="faceMatchCloseIcon">#FF000000</color>
+  <color name="faceMatchfeedbackBg">#00000000</color>
+  <color name="faceMatchfeedbackText">#FF000000</color>
+
+  <!--    new SDK changes by ANIL-->
+  <color name="codeTextColor">#FFF</color>
+  <!--    End new SDK changes by ANIL-->
+
+</resources>

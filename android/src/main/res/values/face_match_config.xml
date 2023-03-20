@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <integer name="fm_feedbackTextSize">18</integer>
+    <string name="fm_feedBackframeMessage">Frame Your Face</string>
+    <string name="fm_feedBackAwayMessage">Move Phone Away</string>
+    <string name="fm_feedBackOpenEyesMessage">Keep Your Eyes Open</string>
+    <string name="fm_feedBackCloserMessage">Move Phone Closer</string>
+    <string name="fm_feedBackCenterMessage">Move Phone Center</string>
+    <string name="fm_feedBackMultipleFaceMessage">Multiple Face Detected</string>
+    <string name="fm_feedBackHeadStraightMessage">Keep Your Head Straight</string>
+    <string name="fm_feedBackBlurFaceMessage">Blur Detected Over Face</string>
+    <string name="fm_feedBackGlareFaceMessage">Glare Detected</string>
+    <!--// 0 for clean face and 100 for Blurry face or set it -1 to remove blur filter-->
+    <integer name="fm_setBlurPercentage">80</integer>
+    <!--// Set min percentage for glare or set it -1 to remove glare filter-->
+    <integer name="fm_setGlarePercentage_0">-1</integer>
+    <!--// Set max percentage for glare or set it -1 to remove glare filter-->
+    <integer name="fm_setGlarePercentage_1">-1</integer>
+</resources>

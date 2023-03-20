@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+  <RelativeLayout
+    android:id="@+id/ocr_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+  </RelativeLayout>
+
+    <include layout="@layout/custom_frame_layout" />
+    
+  <ImageView
+    android:id="@+id/btn_flip"
+    android:layout_width="50dp"
+    android:layout_height="50dp"
+    android:layout_alignParentEnd="true"
+    android:layout_marginStart="@dimen/_20dp"
+    android:layout_marginTop="@dimen/_20dp"
+    android:layout_marginEnd="@dimen/_20dp"
+    android:layout_marginBottom="@dimen/_20dp"
+    android:contentDescription="Flip camera"
+    android:padding="@dimen/_5dp"
+    android:src="@drawable/flip_camera_icon"
+    android:text="flip" />
+
+</RelativeLayout>

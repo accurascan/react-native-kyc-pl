@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="ACCURA_ERROR_CODE_MOTION">Keep Document Steady</string>
+    <string name="ACCURA_ERROR_CODE_DOCUMENT_IN_FRAME">Keep document in frame</string>
+    <string name="ACCURA_ERROR_CODE_BRING_DOCUMENT_IN_FRAME">Bring card near to frame.</string>
+    <string name="ACCURA_ERROR_CODE_PROCESSING">Processing…</string>
+    <string name="ACCURA_ERROR_CODE_BLUR_DOCUMENT">Blur detect in document</string>
+    <string name="ACCURA_ERROR_CODE_FACE_BLUR">Blur detected over face</string>
+    <string name="ACCURA_ERROR_CODE_GLARE_DOCUMENT">Glare detect in document</string>
+    <string name="ACCURA_ERROR_CODE_HOLOGRAM">Hologram Detected</string>
+    <string name="ACCURA_ERROR_CODE_DARK_DOCUMENT">Low lighting detected</string>
+    <string name="ACCURA_ERROR_CODE_PHOTO_COPY_DOCUMENT">Can not accept Photo Copy Document</string>
+    <string name="ACCURA_ERROR_CODE_FACE">Face not detected</string>
+    <string name="ACCURA_ERROR_CODE_MRZ">MRZ not detected</string>
+    <string name="ACCURA_ERROR_CODE_PASSPORT_MRZ">Passport MRZ not detected</string>
+    <string name="ACCURA_ERROR_CODE_ID_MRZ">ID card MRZ not detected</string>
+    <string name="ACCURA_ERROR_CODE_VISA_MRZ">Visa MRZ not detected</string>
+    <string name="ACCURA_ERROR_CODE_WRONG_SIDE">Scanning wrong side of document</string>
+    <string name="ACCURA_ERROR_CODE_UPSIDE_DOWN_SIDE">Document is upside down. Place it properly</string>
+</resources>
