@@ -101,9 +101,9 @@ dependencies {
     implementation "com.facebook.react:react-native:+"  // From node_modules
 
     // START Additional dependencies for accura scan
-    implementation "com.github.accurascan:AccuraOCR:3.4.3"
-    implementation "com.github.accurascan:AccuraFaceMatch:3.2.0"
-    implementation "com.github.accurascan:Liveness-Android:3.2.0"
+    implementation "com.github.accurascan:AccuraOCR:3.1.1"
+    implementation "com.github.accurascan:AccuraFaceMatch:3.1.1"
+    implementation "com.github.accurascan:Liveness-Android:3.1.1"
     
   // END Additional dependencies for accura scan
 }
