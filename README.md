@@ -92,7 +92,6 @@ android {
         pickFirst 'lib/arm64-v8a/libaccuraliveness.so'
     }
 }
-}
 ```
 
 ## Setup iOS
@@ -135,11 +134,11 @@ port install git-lfs
 
 Import react native library into file.
 ```js
-import AccuraKyc from "react-native-kyc-pl";
+import KycPl from "react-native-kyc-pl";
 ```
 ### ➜ Get license configuration from SDK. It returns all active functionalities of your license.
 ```js
-AccuraKyc.getMetaData((error, success) => {
+KycPl.getMetaData((error, success) => {
     if (error != null) {
         //if SDK returns error in this method.
     } else {
@@ -191,7 +190,7 @@ let config = {
     SCAN_TITLE_MRZ_PDF417_BACK:  'Now Scan Back Side of Document',
     SCAN_TITLE_DLPLATE:  'Scan Number Plate'
 }
-AccuraKyc.setupAccuraConfig( config, (error, success) => {
+KycPl.setupAccuraConfig( config, (error, success) => {
     if (error != null) {
         //if SDK returns error in this method.
     } else {
@@ -235,7 +234,7 @@ AccuraKyc.setupAccuraConfig( config, (error, success) => {
 ### ➜ Method for scan MRZ documents.
 ```js
 let passArgs = [{ enableLogs: false }, MRZType, CountryList, AppOrientation]
-AccuraKyc.startMRZ(passArgs, (error, success) => {
+KycPl.startMRZ(passArgs, (error, success) => {
     if (error != null) {
         //if SDK returns error in this method.
     } else {
@@ -263,7 +262,7 @@ AccuraKyc.startMRZ(passArgs, (error, success) => {
 ### ➜ Method for scan OCR documents.
 ```js
 let passArgs = [{ enableLogs: false }, CountryId, CardId, CardName, CardType, AppOrientation]
-AccuraKyc.startOcrWithCard(passArgs, (error, success) => {
+KycPl.startOcrWithCard(passArgs, (error, success) => {
     if (error != null) {
         //if SDK returns error in this method.
     } else {
@@ -289,7 +288,7 @@ AccuraKyc.startOcrWithCard(passArgs, (error, success) => {
 ### ➜ Method for scan barcode.
 ```js
 let passArgs = [{ enableLogs: false }, BarcodeType, AppOrientation]
-AccuraKyc.startBarcode(passArgs, (error, success) => {
+KycPl.startBarcode(passArgs, (error, success) => {
     if (error != null) {
         //if SDK returns error in this method.
     } else {
@@ -309,7 +308,7 @@ AccuraKyc.startBarcode(passArgs, (error, success) => {
 ### ➜ Method for scan bankcard.
 ```js
 let passArgs = [{ enableLogs: false }, AppOrientation]
-AccuraKyc.startBankCard(passArgs, (error, success) => {
+KycPl.startBankCard(passArgs, (error, success) => {
     if (error != null) {
         //if SDK returns error in this method.
     } else {
@@ -343,7 +342,7 @@ var config = {
     setGlarePercentage_1: -1,
 };
 let passArgs = [accuraConfs, config, AppOrientation]
-AccuraKyc.startFaceMatch(passArgs, (error, success) => {
+KycPl.startFaceMatch(passArgs, (error, success) => {
     if (error != null) {
         //if SDK returns error in this method.
     } else {
@@ -410,7 +409,7 @@ var config = {
     codeTextColor: 'white'
 };
 let passArgs = [accuraConfs, config, AppOrientation]
-AccuraKyc.startLiveness(passArgs, (error, success) => {
+KycPl.startLiveness(passArgs, (error, success) => {
     if (error != null) {
         //if SDK returns error in this method.
     } else {
