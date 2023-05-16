@@ -320,7 +320,7 @@ public class FaceMatchActivity extends AppCompatActivity implements FaceHelper.F
                 this.finish();
                 return;
             }
-            AccuraVerificationResult result = data.getParcelableExtra("Accura.fm");
+            AccuraFMCameraModel result = data.getParcelableExtra("Accura.fm");
             if (result == null) {
                 return;
             }
@@ -353,9 +353,9 @@ public class FaceMatchActivity extends AppCompatActivity implements FaceHelper.F
                             faceHelper.setMatchImage(nBmp);
                         }
                      } else {
-                         Log.i(TAG, "handleVerificationSuccessResult :- " + livenessResult);
-                       KycPlModule.faceCL.invoke(null, livenessResult.toString());
-                         this.finish();
+                        Log.i(TAG, "handleVerificationSuccessResult :- " + livenessResult);
+                        KycPlModule.faceCL.invoke(null, livenessResult.toString());
+                        this.finish();
                      }
 
                 } else {
@@ -400,7 +400,7 @@ public class FaceMatchActivity extends AppCompatActivity implements FaceHelper.F
 
     }
 
-    public void handleVerificationSuccessResultFM(final AccuraVerificationResult result) {
+    public void handleVerificationSuccessResultFM(final AccuraFMCameraModel result) {
         if (result != null) {
             if (face1 == null) {
                 if (result.getFaceBiometrics() != null) {
@@ -440,14 +440,18 @@ public class FaceMatchActivity extends AppCompatActivity implements FaceHelper.F
 
     @Override
     public void onLeftDetect(FaceDetectionResult faceDetectionResult) {
-        Bitmap det = BitmapHelper.createFromARGB(faceDetectionResult.getNewImg(), faceDetectionResult.getNewWidth(), faceDetectionResult.getNewHeight());
-        detectFace1 = faceDetectionResult.getFaceImage(det);
+      Bitmap det = BitmapHelper.createFromARGB(faceDetectionResult.getNewImg(), faceDetectionResult.getNewWidth(), faceDetectionResult.getNewHeight());
+      detectFace1 = faceDetectionResult.getFaceImage(det);
+
+      faceHelper.onLeftDetect(faceDetectionResult);
     }
 
     @Override
     public void onRightDetect(FaceDetectionResult faceDetectionResult) {
-        Bitmap det = BitmapHelper.createFromARGB(faceDetectionResult.getNewImg(), faceDetectionResult.getNewWidth(), faceDetectionResult.getNewHeight());
-        detectFace2 = faceDetectionResult.getFaceImage(det);
+      Bitmap det = BitmapHelper.createFromARGB(faceDetectionResult.getNewImg(), faceDetectionResult.getNewWidth(), faceDetectionResult.getNewHeight());
+      detectFace2 = faceDetectionResult.getFaceImage(det);
+
+      faceHelper.onRightDetect(faceDetectionResult);
     }
 
     @Override
