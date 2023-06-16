@@ -400,16 +400,7 @@ var config = {
     setGlarePercentage_0: -1,
     setGlarePercentage_1: -1,
     isSaveImage: true,
-    liveness_url: 'your liveness url',
-    contentType: 'form_data',
-    feedBackLowLightMessage: 'Low light detected',
-    feedbackLowLightTolerence: 39,
-    feedBackStartMessage: 'Put your face inside the oval',
-    feedBackLookLeftMessage: 'Look over your left shoulder',
-    feedBackLookRightMessage: 'Look over your right shoulder',
-    feedBackOralInfoMessage: 'Say each digits out loud',
-    enableOralVerification: false,
-    codeTextColor: 'white'
+    liveness_url: 'your liveness url'
 };
 let passArgs = [accuraConfs, config, AppOrientation]
 KycPl.startLiveness(passArgs, (error, success) => {
@@ -440,15 +431,6 @@ KycPl.startLiveness(passArgs, (error, success) => {
     - setGlarePercentage_1: integer
     - isSaveImage: Boolean
     - liveness_url: URL **(Require)**
-    - contentType: String
-    - feedBackLowLightMessage: String
-    - feedbackLowLightTolerence: integer,
-    - feedBackStartMessage: String
-    - feedBackLookLeftMessage: String
-    - feedBackLookRightMessage: String
-    - feedBackOralInfoMessage: String
-    - enableOralVerification: Boolean,
-    - codeTextColor: String
 
 - Oriantation: String (Optional) (Default portrait)
     - value: portrait or landscape
@@ -536,21 +518,6 @@ Contact AccuraScan at contact@accurascan.com for Liveness SDK or API
 |setGlarePercentage_1|integer|-1|Set max percentage for glare or set it -1 to remove glare filter|
 |isSaveImage|boolean|true||
 |liveness_url|URL string|Your liveness url|Required|
-|contentType|string|form_data|param type of your liveness API|
-|livenessBackground|color string|#FFC4C4C5||
-|livenessCloseIcon|color string|#FF000000||
-|livenessfeedbackBg|color string|#00000000||
-|livenessfeedbackText|color string|#FF000000||
-|feedBackLowLightMessage|string|Low light detected||
-|feedbackLowLightTolerence|integer|39||
-|feedBackStartMessage|string|Put your face inside the oval||
-|feedBackLookLeftMessage|string|Look over your left shoulder||
-|feedBackLookRightMessage|string|Look over your right shoulder||
-|feedBackOralInfoMessage|string|Say each digits out loud||
-|feedBackProcessingMessage|string|"Processing..."||
-|isShowLogo|boolean|true|For display watermark logo images|
-|enableOralVerification|boolean|true||
-|codeTextColor|color string|#FF000000||
 
 ###
 ### Face Match Configurations:  JSON Object

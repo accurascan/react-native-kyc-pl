@@ -159,7 +159,8 @@ public class FaceMatchActivity extends AppCompatActivity implements FaceHelper.F
         }
         livenessCustomization.feedbackTextSize = res.getInteger(R("feedbackTextSize", "integer"));
         if (bundle.containsKey("livenessfeedbackText")) {
-        livenessCustomization.feedbackTextSize = bundle.getInt("feedbackTextSize");
+          double data = bundle.getDouble("feedbackTextSize");
+          livenessCustomization.feedbackTextSize = (int)data;
         }
         livenessCustomization.feedBackframeMessage = res.getString(R("feedBackframeMessage", "string"));
         if (bundle.containsKey("feedBackframeMessage")) {
@@ -200,15 +201,18 @@ public class FaceMatchActivity extends AppCompatActivity implements FaceHelper.F
 
         livenessCustomization.setBlurPercentage(res.getInteger(R("setBlurPercentage", "integer")));
         if (bundle.containsKey("setBlurPercentage")) {
-        livenessCustomization.setBlurPercentage(bundle.getInt("setBlurPercentage"));
+          double data = bundle.getDouble("setBlurPercentage");
+          livenessCustomization.setBlurPercentage((int) data);
         }
         int minGlare = res.getInteger(R("setGlarePercentage_0", "integer"));
         int maxGlare = res.getInteger(R("setGlarePercentage_1", "integer"));
         if (bundle.containsKey("setGlarePercentage_0")) {
-        minGlare = bundle.getInt("setGlarePercentage_0");
+          double data = bundle.getDouble("setGlarePercentage_0");
+          minGlare = (int)data;
         }
         if (bundle.containsKey("setGlarePercentage_1")) {
-        minGlare = bundle.getInt("setGlarePercentage_1");
+          double data = bundle.getDouble("setGlarePercentage_1");
+          maxGlare = (int)data;
         }
         livenessCustomization.setGlarePercentage(minGlare, maxGlare);
 
@@ -245,7 +249,8 @@ public class FaceMatchActivity extends AppCompatActivity implements FaceHelper.F
 
         cameraScreenCustomization.feedbackTextSize = res.getInteger(R("feedbackTextSize", "integer"));
         if (bundle.containsKey("feedbackTextSize")) {
-        cameraScreenCustomization.feedbackTextSize = bundle.getInt("feedbackTextSize");
+          double data = bundle.getDouble("feedbackTextSize");
+          cameraScreenCustomization.feedbackTextSize = (int)data;
         }
 
         cameraScreenCustomization.feedBackframeMessage = res.getString(R("feedBackframeMessage", "string"));
@@ -295,16 +300,18 @@ public class FaceMatchActivity extends AppCompatActivity implements FaceHelper.F
 
         cameraScreenCustomization.setBlurPercentage(res.getInteger(R("setBlurPercentage", "integer")));
         if (bundle.containsKey("setBlurPercentage")) {
-        cameraScreenCustomization.setBlurPercentage(bundle.getInt("setBlurPercentage"));
+          double data = bundle.getDouble("setBlurPercentage");
+          cameraScreenCustomization.setBlurPercentage((int) data);
         }
-
         int minGlare = res.getInteger(R("setGlarePercentage_0", "integer"));
         int maxGlare = res.getInteger(R("setGlarePercentage_1", "integer"));
         if (bundle.containsKey("setGlarePercentage_0")) {
-        minGlare = bundle.getInt("setGlarePercentage_0");
+          double data = bundle.getDouble("setGlarePercentage_0");
+          minGlare = (int)data;
         }
         if (bundle.containsKey("setGlarePercentage_1")) {
-        minGlare = bundle.getInt("setGlarePercentage_1");
+          double data = bundle.getDouble("setGlarePercentage_1");
+          maxGlare = (int)data;
         }
         cameraScreenCustomization.setGlarePercentage(minGlare, maxGlare);
         Intent intent = SelfieFMCameraActivity.getCustomIntent(this, cameraScreenCustomization);
