@@ -19,8 +19,8 @@ Pod::Spec.new do |s|
 
   s.dependency "React-Core"
   s.static_framework = true
-  s.dependency "AccuraOCR","3.1.3"
-  s.dependency "AccuraLiveness_FM","3.1.4"
+  s.dependency "AccuraOCR","3.2.2"
+  s.dependency "AccuraLiveness_FM","4.2.2"
   s.dependency "JGProgressHUD","2.2"
   s.swift_version = '5.0'
   s.platform = :ios, '12.0'

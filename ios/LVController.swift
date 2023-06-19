@@ -22,10 +22,6 @@ class LVController: UIViewController
         if(!EngineWrapper.isEngineInit()) {
             EngineWrapper.faceEngineInit()
         }
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
         startLV()
     }
     
@@ -154,8 +150,7 @@ class LVController: UIViewController
             }
         }
         
-//        New changes by ANIL => End
-//        liveness.evaluateServerTrustWIthSSLPinning(false)
+        liveness.evaluateServerTrustWIthSSLPinning(false)
         liveness.setLiveness(self)
     }
     
@@ -171,7 +166,6 @@ extension LVController: LivenessData {
         LivenessConfigs.isLivenessGetVideo = false
         LivenessConfigs.livenessVideo = ""
         if status == true {
-            print(stLivenessValue)
             results["status"] = true
             results["score"] = stLivenessValue.replacingOccurrences(of: " %", with: "")
             results["with_face"] = gl.withFace

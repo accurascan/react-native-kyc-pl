@@ -447,13 +447,13 @@ export default class App extends React.Component {
       feedBackGlareFaceMessage:
         this.language == 'en' ? 'Glare Detected' : 'تم الكشف عن الوهج',
       // <!--// 0 for clean face and 100 for Blurry face or set it -1 to remove blur filter-->
-      setBlurPercentage: 80,
+      setBlurPercentage: -1,
       // <!--// Set min percentage for glare or set it -1 to remove glare filter-->
       setGlarePercentage_0: -1,
       // <!--// Set max percentage for glare or set it -1 to remove glare filter-->
       setGlarePercentage_1: -1,
       isSaveImage: true,
-      liveness_url: 'https://accurascan.com:8443/check_liveness',
+      liveness_url: 'your liveness url',
     };
 
     let passArgs = [accuraConfs, config, getOrientation()];

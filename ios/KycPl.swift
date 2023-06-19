@@ -206,7 +206,7 @@ class KycPl: NSObject {
         ScanConfigs.accuraConfigs["app_orientation"] = self.goNativeArgs.count > 3 ? self.goNativeArgs[3] as! String : self.defaultAppOriantation
         gl.type = "mrz"
         DispatchQueue.main.async {
-            let viewController = UIStoryboard(name: "MainStoryboard_iPhone", bundle: nil).instantiateViewController(withIdentifier: "ViewController") as! ViewController
+            let viewController = UIStoryboard(name: "MainStoryboard_iPhone", bundle: nil).instantiateViewController(withIdentifier: "ScanViewController") as! ScanViewController
             viewController.callBack = self.goNativeCallBack
             viewController.isCheckScanOCR = false
             viewController.isCheckCardMRZ = true
@@ -236,7 +236,7 @@ class KycPl: NSObject {
         ScanConfigs.accuraConfigs = self.goNativeArgs[0] as! [String: Any]
         ScanConfigs.accuraConfigs["app_orientation"] = self.goNativeArgs.count > 1 ? self.goNativeArgs[1] as! String : self.defaultAppOriantation
         DispatchQueue.main.async {
-            let viewController = UIStoryboard(name: "MainStoryboard_iPhone", bundle: nil).instantiateViewController(withIdentifier: "ViewController") as! ViewController
+            let viewController = UIStoryboard(name: "MainStoryboard_iPhone", bundle: nil).instantiateViewController(withIdentifier: "ScanViewController") as! ScanViewController
             viewController.callBack = self.goNativeCallBack
             viewController.isCheckScanOCR = true
             viewController.cardType = 3
@@ -257,7 +257,7 @@ class KycPl: NSObject {
         ScanConfigs.barcodeType = self.goNativeArgs[1] as! String
         ScanConfigs.accuraConfigs["app_orientation"] = self.goNativeArgs.count > 2 ? self.goNativeArgs[2] as! String : self.defaultAppOriantation
         DispatchQueue.main.async {
-            let viewController = UIStoryboard(name: "MainStoryboard_iPhone", bundle: nil).instantiateViewController(withIdentifier: "ViewController") as! ViewController
+            let viewController = UIStoryboard(name: "MainStoryboard_iPhone", bundle: nil).instantiateViewController(withIdentifier: "ScanViewController") as! ScanViewController
             viewController.callBack = self.goNativeCallBack
             viewController.isBarCode = true
             viewController.reactViewController = self.viewController
@@ -280,7 +280,7 @@ class KycPl: NSObject {
         ScanConfigs.CardType = self.goNativeArgs[4] as! Int
         ScanConfigs.accuraConfigs["app_orientation"] = self.goNativeArgs.count > 5 ? self.goNativeArgs[5] as! String : self.defaultAppOriantation
         DispatchQueue.main.async {
-            let viewController = UIStoryboard(name: "MainStoryboard_iPhone", bundle: nil).instantiateViewController(withIdentifier: "ViewController") as! ViewController
+            let viewController = UIStoryboard(name: "MainStoryboard_iPhone", bundle: nil).instantiateViewController(withIdentifier: "ScanViewController") as! ScanViewController
             viewController.cardType = self.goNativeArgs[4] as! Int
             viewController.callBack = self.goNativeCallBack
             viewController.isCheckScanOCR = true
