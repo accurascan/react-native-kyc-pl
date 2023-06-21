@@ -12,7 +12,11 @@ yarn add react-native-kyc-pl
 ```
 **Installation using Yarn from Git**
 ```sh
-yarn add https://github.com/accurascan/react-native-kyc-pl
+yarn add https://github.com/accurascan/react-native-kyc-pl.git
+```
+**Installation using Yarn from Git with simulator SDK**
+```sh
+yarn add https://github.com/accurascan/react-native-kyc-pl.git#with-simulator
 ```
 
 ## Setup Android
@@ -110,9 +114,10 @@ port install git-lfs
 ```
 
 ### Note: Following lines needs to add in Podfile if you are using simulator SDK for iOS.
-**Add following lines into Podfile before install Pod**
+**Add following lines into Podfile -> post_install section before install Pod**
 ```sh
 post_install do |installer|
+    ...
     installer.pods_project.targets.each do |target|
       target.build_configurations.each do |config|
         config.build_settings['EXCLUDED_ARCHS[sdk=iphonesimulator*]'] = "arm64"
