@@ -408,8 +408,8 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-KycPlExample/Pods-KycPlExample-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
-				"${PODS_ROOT}/AccuraLiveness_FM/AccuraLiveness_fm.framework",
-				"${PODS_ROOT}/AccuraOCR/AccuraOCR.framework",
+				"${PODS_ROOT}/AccuraLiveness_FM_Sim/AccuraLiveness_fm.framework",
+				"${PODS_ROOT}/AccuraOCR_Sim/AccuraOCR.framework",
 				"${BUILT_PRODUCTS_DIR}/DoubleConversion/DoubleConversion.framework",
 				"${BUILT_PRODUCTS_DIR}/FBReactNativeSpec/FBReactNativeSpec.framework",
 				"${BUILT_PRODUCTS_DIR}/Folly/folly.framework",
@@ -661,6 +661,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = RQLGL75S5H;
 				ENABLE_BITCODE = NO;
+				EXCLUDED_ARCHS = arm64;
 				INFOPLIST_FILE = KycPlExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -685,6 +686,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = RQLGL75S5H;
+				EXCLUDED_ARCHS = arm64;
 				INFOPLIST_FILE = KycPlExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

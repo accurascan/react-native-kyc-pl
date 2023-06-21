@@ -108,6 +108,19 @@ or
 
 port install git-lfs
 ```
+
+### Note: Following lines needs to add in Podfile if you are using simulator SDK for iOS.
+**Add following lines into Podfile before install Pod**
+```sh
+post_install do |installer|
+    installer.pods_project.targets.each do |target|
+      target.build_configurations.each do |config|
+        config.build_settings['EXCLUDED_ARCHS[sdk=iphonesimulator*]'] = "arm64"
+      end
+    end
+end
+```
+
 ### Add this permissions into iOS Info.plist file.
 ```sh
 <key>NSCameraUsageDescription</key>
